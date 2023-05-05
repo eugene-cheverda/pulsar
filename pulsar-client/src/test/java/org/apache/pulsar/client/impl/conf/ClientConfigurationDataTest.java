@@ -39,7 +39,7 @@ public class ClientConfigurationDataTest {
         ObjectMapper objectMapper = new ObjectMapper();
         objectMapper.configure(SerializationFeature.FAIL_ON_EMPTY_BEANS, false);
         String serializedConf = objectMapper.writeValueAsString(clientConfigurationData);
-        assertThat(serializedConf).doesNotContain("xxxx", "yyyy", "zzzz");
+        assertThat(serializedConf).doesNotContain("xxxx", "yyyy", "zzzz", "serviceUrlProvider");
     }
 
 }
